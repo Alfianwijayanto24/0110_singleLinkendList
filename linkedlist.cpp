@@ -162,6 +162,11 @@ int main()
                 }
                 Node *previous, *current;
                 cout << endl
+                << "Memasukan no mahasiswa yang dicuri :";
+                cin >> nim;
+                if(mhs.Search(nim, &previous, &current)== false)
+                cout << endl
+                
             }
         }
 
