@@ -12,7 +12,7 @@ class List
 {
     Node *START;
 
-    public:
+public:
     List()
     {
         START = NULL;
@@ -27,5 +27,12 @@ class List
         nodeBaru->noMhs = nim;
 
         if (START == NULL || nim <= START->noMhs)
+        {
+            if ((START != NULL )) && (nim == START->noMhs)
+            {
+                cout << "\nDuplikasi noMhs tidak diijinkan\n";
+            }
+        }
     }
+    
 }
