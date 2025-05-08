@@ -147,6 +147,13 @@ int main()
                 cout << endl
                 << "Data dengan nomer mahasiswa"<< nim<< "berhasil dihapus" << endl;
             }
+            break;
+            case '3':
+            {
+                mhs.traveres();
+            }
+            break;
+            case 
         }
 
     }
