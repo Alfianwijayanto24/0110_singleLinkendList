@@ -28,7 +28,7 @@ public:
 
         if (START == NULL || nim <= START->noMhs)
         {
-            if ((START != NULL )) && (nim == START->noMhs)
+            if ((START != NULL ) && (nim == START->noMhs))
             {
                 cout << "\nDuplikasi noMhs tidak diijinkan\n";
                 return;
@@ -36,7 +36,7 @@ public:
             previous = current;
             current = current->next;
         }
-        nodeBaru->next = curent;
+        nodeBaru->next = current;
         previous->next = nodeBaru;
     }
     bool listEmpty()
@@ -48,7 +48,7 @@ public:
         *previous = START;
         *current = START;
 
-        while ((*current !=NULL))&& (nim != (*current)->noMhs)
+        while ((*current !=NULL) && (nim != (*current)->noMhs))
         {
             *previous = *current;
             *current =(current)->next;
@@ -72,6 +72,16 @@ public:
         return true;
     }
     void traveres()
+    {
+        if (listEmpty())
+        {
+            cout << "\nList Kosong\n";
+        }
+        else
+        {
+            cout << "\nData didalam"
+        }
+    }
 
     
 }
