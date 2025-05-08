@@ -8,3 +8,24 @@ class Node
     int noMhs;
     Node *next;
 };
+class List
+{
+    Node *START;
+
+    public:
+    List()
+    {
+        START = NULL;
+    }
+    void addNode()
+    {
+        int nim;
+        cout << "\nMasukan Nomer Mahasiswa: ";
+        cin >> nim;
+
+        Node *nodeBaru = new Node;
+        nodeBaru->noMhs = nim;
+
+        if (START == NULL || nim <= START->noMhs)
+    }
+}
