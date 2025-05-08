@@ -33,11 +33,25 @@ public:
                 cout << "\nDuplikasi noMhs tidak diijinkan\n";
                 return;
             }
-            previous = current;
-            current = current->next;
+            nodeBaru->next = START;
+            START = nodeBaru;
+            return;
+            
         }
-        nodeBaru->next = current;
+        Node *previous = START;
+        Node *current = START;
+
+        while((current != NULL)&&(nim >= current->noMhs))
+        {
+            if (nim == current->noMhs)
+            {
+                cout << "\nDuplikat noMhs tidak diijinkan\n";
+                return;
+            }
+            nodeBaru->next = current;
         previous->next = nodeBaru;
+        }
+       
     }
     bool listEmpty()
     {
@@ -51,7 +65,7 @@ public:
         while ((*current !=NULL) && (nim != (*current)->noMhs))
         {
             *previous = *current;
-            *current =(current)->next;
+            *current =(*current)->next;
         }
         
             return (*current !=NULL);
@@ -107,6 +121,33 @@ int main()
         cout<< "4. Mencari data dalam list" << endl;
         cout<< "5. Keluar"<< endl;
         cout<< "Masukan pilihan (1-5):"<< endl;
+        cin >> ch;
+        switch (ch)
+        {
+            case '1':
+            {
+                mhs.addNode();
+                break;
+            }
+            case '2':
+            {
+                if (mhs.listEmpty())
+                {
+                    cout << endl
+                        <<"List Kosong"<< endl;
+                        break;
+                }
+                cout << endl
+                << "\nMasukkan no mahasiswa yang akan dihapus:";
+                cin >> nim;
+                if (mhs.detNode(nim)== false)
+                cout << endl
+                <<"Data tidak ditemukan" <<endl;
+                else 
+                cout << endl
+                << "Data dengan nomer mahasiswa"<< nim<< "berhasil dihapus"
+            }
+        }
 
     }
 }
