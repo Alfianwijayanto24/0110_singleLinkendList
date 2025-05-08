@@ -145,7 +145,7 @@ int main()
                 <<"Data tidak ditemukan" <<endl;
                 else 
                 cout << endl
-                << "Data dengan nomer mahasiswa"<< nim<< "berhasil dihapus"
+                << "Data dengan nomer mahasiswa"<< nim<< "berhasil dihapus" << endl;
             }
         }
 
