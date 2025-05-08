@@ -153,7 +153,16 @@ int main()
                 mhs.traveres();
             }
             break;
-            case 
+            case '4':
+            {
+                if (mhs.listEmpty()== true)
+                {
+                    cout<< "\nList Kosong\n";
+                    break;
+                }
+                Node *previous, *current;
+                cout << endl
+            }
         }
 
     }
